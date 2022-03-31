@@ -4,7 +4,7 @@
  *
  *  ---------------------------------------------------------------------------
  *
- *  Copyright (C) 2019-2021 Cosimo Lupo
+ *  Copyright (C) 2019-2022 Cosimo Lupo
  *
  *  This source code is distributed as part of the 'indie' software.
  *  'indie' (INference on Deletion and InsErtions) is a versatile software

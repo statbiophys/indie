@@ -1,13 +1,15 @@
 # *indie* (INference on Deletions and InsErtions) documentation
 ----
 
-## Cosimo Lupo &#169; 2019-2021
+## Cosimo Lupo &#169; 2019-2022
 
 Probabilistic alignment software to deal with indels in Ig receptor sequences.
 
+It has been introduced in the paper: Cosimo Lupo, Natanael Spisak, Aleksandra M. Walczak, Thierry Mora, *"Learning the statistics and landscape of somatic mutation-induced insertions and deletions in antibodies"*, [arXiv (2021) 2112.07953](https://arxiv.org/abs/2112.07953).
+
 ## Version
 
-Latest released version: 1.2.3 (dated 14/12/2021).
+Latest released version: 1.2.4 (dated 10/03/2022).
 
 ## License
 
@@ -108,7 +110,7 @@ Further details about the various options can be found below.
 ./indie -r input_file.csv
 ```
 
-This file has to be formatted according to a specific comma-separated syntax:
+This file has to be formatted according to a specific comma-separated syntax (with semicolon as field delimiter):
 
 | seq\_ID | aligned\_seq\_nt                  | V\_best       | V\_best\_start | V\_best\_end |
 | :------ | :-------------------------------- | :------------ | :------------- | :----------- |
@@ -119,6 +121,8 @@ This file has to be formatted according to a specific comma-separated syntax:
 | ...     | ...                               | ...           | ...            | ...          |
 
 Last columns refer to the name of the best-scoring V template and the limits of the aligned region along the template itself. Any Ig alignment tool could be used to obtain these info; we recommend [igBlast](https://www.ncbi.nlm.nih.gov/igblast) for its reliability and speed, but other tools can be exploited as well.
+
+Under the `preprocessing` folder of the repository several auxiliary scripts can be found, among which an annotation pipeline based on igBlast that eventually formats sequences (segregated and quality-filtered according to customizable parameters) in the format shown above. It is even possible to start from high-throughput raw reads, using the preprocessing script under the same folder. Please refer to the `README` file in it for further details.
 
 Once read the input file, *indie* creates a folder `read` and stores in it a copy of the input file.
 

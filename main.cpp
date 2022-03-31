@@ -4,7 +4,7 @@
  *
  *  ---------------------------------------------------------------------------
  *
- *  Copyright (C) 2019-2021 Cosimo Lupo
+ *  Copyright (C) 2019-2022 Cosimo Lupo
  *
  *  This source code is distributed as part of the 'indie' software.
  *  'indie' (INference on Deletion and InsErtions) is a versatile software
@@ -36,8 +36,8 @@
 #include "generate.h"
 #include "greedy.h"
 
-string last_version = "1.2.3";
-string last_date = "14/12/2021";
+string last_version = "1.2.4";
+string last_date = "10/03/2022";
 
 // Recalling global variables from funcs.h
 int gap_bound = max_gap_bound;
